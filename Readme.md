@@ -600,6 +600,8 @@ while (i < 10) {
 
 ---
 
+### Bis hier am 19.Februar.2025
+
 ### 4️⃣ Kombination von `break` und `continue`  
 
 Man kann **`break` und `continue` in einer Schleife kombinieren**, um präzisere Steuerung zu haben.  
