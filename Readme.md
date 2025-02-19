@@ -236,6 +236,8 @@ for (let i = 10; i >= 1; i--) {
 2. Die for-Schleife eignet sich besonders für feste Wiederholungen.
 3. Wir können sie nutzen, um durch Zahlen, Arrays oder andere Datenstrukturen zu iterieren.
 
+--- 
+
 ## 📌 2. Stunde – Die while- und do...while-Schleifen (60 min)
 
 ### Lernziele:
@@ -464,8 +466,6 @@ Perfekt für Benutzereingaben oder Menüs
 - `while`-Schleifen sind gut, wenn wir nicht wissen, wie oft etwas wiederholt werden soll.
 - `do...while`-Schleifen garantieren mindestens eine Ausführung.
 - Beide können für Benutzerinteraktionen, Sensorwerte oder Event-basierte Programmierung genutzt werden.
-
-## Hier ist die detaillierte Ausarbeitung der **dritten Stunde** deiner Unterrichtseinheit über Schleifen in JavaScript.  
 
 ---
 
@@ -704,8 +704,6 @@ for(let i = 1; i <= 20; i++) {
 2. `continue` sorgt dafür, dass Zahlen wie 3, 6, 9, 12 nicht ausgegeben werden.
 3. console.log(i) wird nur für die gewünschten Zahlen ausgeführt.
 
-## Hier ist die **vierte Unterrichtsstunde** über **verschachtelte Schleifen** im Detail ausgearbeitet.  
-
 ---
 
 ## 🕓 Stunde 4: Verschachtelte Schleifen
@@ -913,8 +911,7 @@ for (let i = 0; i < 8; i++) {
 - Wie sie für praktische Anwendungen (Multiplikationstabelle, Muster) genutzt werden.  
 - Welche Fehler vermieden werden sollten.  
 - Wie man sie effizient optimieren kann.  
-
-Hier ist die **fünfte Unterrichtsstunde** über **effiziente Schleifen und Performance-Optimierung** im Detail ausgearbeitet.  
+ 
 
 # 🕓 Stunde 5: Effiziente Nutzung von Schleifen & Vermeidung von Endlosschleifen
 
