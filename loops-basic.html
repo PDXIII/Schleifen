@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Basic</title>
+</head>
+<body>
+    <h1>Loops Basic</h1>
+    <script>
+
+        // Gebe die Zahlen 1 bis 5 in der Konsole
+        // print first 5 numbers to the console
+
+        // console.log(1);
+        // console.log(2);
+        // console.log(3);
+        // console.log(4);
+        // console.log(5);
+
+        //  for-loops
+
+        // Aufbau eines For-Loops:
+
+        // for (Startwert; Bedingung; Änderung) {
+        //   Code, der wiederholt wird
+        // }
+
+        //  Verkürzung von 1er Schritten
+
+        //  i = i + 1 entspricht i++
+        //  i = i - 1 entspricht i--
+
+        // Aufwärtszählen (Countup)
+        // for (let i = 1 ; i <= 10; i++) {
+        //    // Code, der wiederholt wird
+        //    console.log(i);
+        // }
+
+        //  Abwärtszählen (Countdown)
+        // for (let i = 10 ; i >= 0; i--) {
+        //    // Code, der wiederholt wird
+        //    console.log(i);
+        // }
+
+        // Aufgabe: errechne die Potenzen der Zahlen von 1 bis 10
+        // Task: calculate the powers of the numbers from 1 to 10
+
+        // 1  
+        // 4  
+        // 9  
+        // 16  
+        // 25  
+        // 36  
+        // 49  
+        // 64  
+        // 81  
+        // 100
+
+        // for (let i = 1; i <= 10; i++) {
+        //     console.log(`die Potenz von ${i} ist gleich:`);
+        //     console.log(i * i); // console.log(i ** 2)
+        // }
+
+        // Aufgabe: Zähle abwärts von 100 bis 50 und gib die Zahlen aus
+        // Task: count down from 100 to 50 and print the numbers
+
+        // 15 Minuten Timer
+
+        // console.log("10 minutes timer");
+        // for (let i = 300; i >= 0; i--) {
+        //     setTimeout(function() {
+        //         console.log(i);
+        //     }, (300 - i) * 1000);
+        // }
+        // console.log("set");
+ 
+
+        // while-loops
+
+        // while (Bedingung) {
+        //     code
+        // }
+
+        // let letCount = true;
+        // let i = 1;
+
+        // while (letCount) {
+        //     if (i >= 100) {
+        //         letCount = false;
+        //     }
+        //     console.log(i);
+        //     i++;
+        // }
+
+        // Aufgabe: bitte schreibe eine while-schleife, die die ungerade Zahlen von 1 bis 100 ausgibt
+        // Task: please write a while-loop that prints the odd numbers from 1 to 100
+
+        // let i = 1;
+
+        // while (i <= 100) {
+        //     console.log(i);
+        //     i = i + 2;
+        // }
+
+
+// <!-- do-while-loops -->
+
+        // let i = 11;
+
+        // do {
+        //     i = i + 2;
+        //     console.log(i);
+        // } while (i <= 10);
+
+        // let counter = 3;
+        // let reply;
+        // let richtig = false;
+
+        // do {
+        //     if (counter > 0) {
+        //         reply = prompt('Gib Yes ein');
+        //         counter--;
+        //     } else {
+        //         alert("Zuviele falsche Antworten!");
+        //         break;
+        //     }
+        //     if (reply === "Yes") {
+        //         richtig = true;
+        //     }
+        // } while (reply !== "Yes");
+
+        // if (richtig) {
+
+        //     console.log('Deine Antwort ist richtig!');
+        // }
+
+
+        // Schleifensteuerung mit break und continue
+
+        // for (let i = 1; i <= 10 ; i++) {
+        //     if (i === 5) {
+        //         console.log("Schleife abgebrochen!")
+        //         break;
+        //     }
+
+        //     console.log(i);
+        // }
+
+        // let myCondition = true;
+
+        // while (myCondition) {
+        //     let zahl = prompt("Gib eine Zahl ein (0 zum Beenden):");
+        //     if(zahl === "0") {
+        //         console.log("Schleife gestoppt.");
+        //         break;
+        //     }
+        //     console.log("eingegebene Zahl " + zahl);
+        // }
+
+        // for (let i = 1; i <= 100 ; i++) {
+        //     if (i % 3 === 0) {
+        //         console.log("Wir überspringen die " + i)
+        //         continue;
+        //     }
+
+        //     console.log(i);
+        // }
+
+        let i = 0;
+
+        while (i < 100 ) {
+            i++;
+            if (i % 2 !== 0) {
+                continue;
+            }
+            console.log(i);
+        }
+
+
+    </script>
+</body>
+</html>
