@@ -30,7 +30,8 @@ for (let i = 0; i < 5; i++) {
 Struktur und Syntax der `while`Schleife.
         
 ```jsx
-let i = 0;while (i < 5) {
+let i = 0;
+while (i < 5) {
 	console.log(i);  i++;
 }
 ```
@@ -550,7 +551,8 @@ for (let i = 1; i <= 10; i++) {
 }
 ```
 
-🔍 **Erwartete Ausgabe:**  
+🔍 **Erwartete Ausgabe:** 
+ 
 ```
 1  
 2  
@@ -562,12 +564,15 @@ for (let i = 1; i <= 10; i++) {
 9  
 10
 ```
-**🚀 Was passiert hier?**  
+
+**🚀 Was passiert hier?** 
+ 
 1. Wenn `i === 5`, wird `continue` ausgeführt.  
 2. Der `console.log(i);` wird für `i = 5` **nicht** ausgeführt.  
 3. Die Schleife fährt mit `i = 6` fort.  
 
 ✔ **Warum `continue` nutzen?**  
+
 - Um **unerwünschte Werte** zu ignorieren (z. B. **Nur gerade Zahlen drucken**, nur bestimmte Benutzergruppen filtern).  
 
 
@@ -586,6 +591,7 @@ while (i < 10) {
 ```
 
 🔍 **Erwartete Ausgabe:**  
+
 ```
 2  
 4  
@@ -594,20 +600,22 @@ while (i < 10) {
 10
 ```
 
-✔ **Typische Anwendung von `continue` in `while`-Schleifen:**  
+✔ **Typische Anwendung von `continue` in `while`-Schleifen:** 
+ 
 - Nur bestimmte Daten verarbeiten (z. B. keine negativen Werte verarbeiten).  
 - Bedingungen für die Verarbeitung von Daten definieren (z. B. nur gerade Zahlen verarbeiten).  
 
+**Ende Schleifen Tag 1 19.Februar 2025**
 ---
-
-### Bis hier am 19.Februar.2025
 
 ### 4️⃣ Kombination von `break` und `continue`  
 
 Man kann **`break` und `continue` in einer Schleife kombinieren**, um präzisere Steuerung zu haben.  
 
-**🔹 Beispiel 1: Suche in einem Array mit `break` und `continue`**  
-Wir haben eine Liste von Namen. Wir möchten:  
+**🔹 Beispiel 1: Suche in einem Array mit `break` und `continue`** 
+ 
+Wir haben eine Liste von Namen. Wir möchten: 
+ 
 - Nur Namen mit mehr als 5 Buchstaben ausgeben.  
 - Falls der Name „Chris“ kommt, die Suche sofort abbrechen.  
 
@@ -628,15 +636,16 @@ for (let i = 0; i < namen.length; i++) {
 }
 ```
 
-🔍 **Erwartete Ausgabe:**  
+🔍 **Erwartete Ausgabe:** 
+ 
 ```
 Robert  
 Suche beendet!
 ```
 
-✔ **Warum ist das praktisch?**  
+✔ **Warum ist das praktisch?** 
+ 
 - Daten filtern (`continue`), aber gleichzeitig die Suche frühzeitig abbrechen (`break`).  
-
 
 
 ### 5️⃣ Fazit & Best Practices  
@@ -648,6 +657,7 @@ Suche beendet!
 | **Typisches Beispiel**: Suche beenden, wenn ein Wert gefunden wurde. | **Typisches Beispiel**: Nur bestimmte Werte in einer Liste ausgeben. |
 
 **🚀 Best Practices für `break` und `continue`**
+
 - Verwende `break`, wenn du sicher weißt, dass keine weiteren Iterationen nötig sind.  
 - Nutze `continue`, wenn du bestimmte Werte überspringen willst, aber die Schleife fortsetzen möchtest.  
 - Achte darauf, `break` nicht versehentlich in Schleifen zu nutzen, die eigentlich weiterlaufen sollten.  
@@ -656,7 +666,9 @@ Suche beendet!
 
 
 ### 📌 Abschlussübung  
+
 **Aufgabe:**
+
  Schreibe eine `for`-Schleife, die alle Zahlen von `1` bis `20` ausgibt, aber:  
 1. `continue` verwendet, um Zahlen, die durch 3 teilbar sind, zu überspringen.  
 2. `break` ausführt, wenn die Zahl `15` erreicht ist.  
@@ -699,6 +711,7 @@ for(let i = 1; i <= 20; i++) {
 ## 🕓 Stunde 4: Verschachtelte Schleifen
 
 ### 🎯 Lernziele dieser Stunde
+
 - Verstehen, was verschachtelte Schleifen sind und wann sie nützlich sind.  
 - Die **Ausführungsreihenfolge** von verschachtelten Schleifen nachvollziehen.  
 - Praktische Anwendungsfälle kennenlernen, z. B. für Tabellen oder Muster.  
@@ -706,10 +719,12 @@ for(let i = 1; i <= 20; i++) {
 
 
 ### 🔹 1. Was sind verschachtelte Schleifen?
+
 Eine **verschachtelte Schleife** ist eine Schleife, die sich innerhalb einer anderen Schleife befindet.  
 Die innere Schleife wird **bei jedem Durchlauf der äußeren Schleife vollständig durchlaufen**.  
 
 **📌 Beispiel 1: Ausgabe eines Zahlenrasters**
+
 ```js
 for (let i = 1; i <= 3; i++) {  // Äußere Schleife
   for (let j = 1; j <= 3; j++) {  // Innere Schleife
@@ -717,7 +732,9 @@ for (let i = 1; i <= 3; i++) {  // Äußere Schleife
   }
 }
 ```
+
 🔍 **Erwartete Ausgabe:**
+
 ```
 i = 1, j = 1
 i = 1, j = 2
@@ -731,15 +748,18 @@ i = 3, j = 3
 ```
 
 💡 **Erklärung:**  
+
 - Die **äußere Schleife** läuft von `1` bis `3`.  
 - Bei **jedem Durchlauf** der äußeren Schleife startet die **innere Schleife** von `1` bis `3`.  
 - Das bedeutet, dass die **innere Schleife 3-mal für jede äußere Iteration durchläuft**, also insgesamt `3 × 3 = 9` Iterationen.
 
 
 ## 🔹 2. Anwendung: Erstellung einer Multiplikationstabelle
+
 Eine häufige Anwendung für verschachtelte Schleifen ist die Erstellung einer **Multiplikationstabelle**.
 
 **📌 Beispiel 2: 10er-Multiplikationstabelle**
+
 ```js
 for (let i = 1; i <= 10; i++) {
   let row = ""; // Hier speichern wir die Zeile als String
@@ -749,7 +769,9 @@ for (let i = 1; i <= 10; i++) {
   console.log(row);
 }
 ```
+
 🔍 **Erwartete Ausgabe:**
+
 ```
    1   2   3   4   5   6   7   8   9  10
    2   4   6   8  10  12  14  16  18  20
@@ -758,6 +780,7 @@ for (let i = 1; i <= 10; i++) {
 ```
 
 💡 **Erklärung:**  
+
 - Die äußere Schleife **wechselt die Zeile** (z. B. `i = 1, i = 2, ...` für jede Reihe der Tabelle).  
 - Die innere Schleife berechnet **jeden Wert der aktuellen Zeile** (`i * j`).  
 - Wir nutzen **`padStart(4, " ")`**, um alle Zahlen **gleichmäßig zu formatieren**.  
@@ -767,6 +790,7 @@ for (let i = 1; i <= 10; i++) {
 Eine kreative Anwendung ist das Zeichnen von **Mustern** in der Konsole.
 
 **📌 Beispiel 3: Ausgabe eines Sternmusters**
+
 ```js
 for (let i = 1; i <= 5; i++) {
   let stars = "";
@@ -776,7 +800,9 @@ for (let i = 1; i <= 5; i++) {
   console.log(stars);
 }
 ```
+
 🔍 **Erwartete Ausgabe:**
+
 ```
 * 
 * * 
@@ -786,19 +812,24 @@ for (let i = 1; i <= 5; i++) {
 ```
 
 💡 **Erklärung:**  
+
 - Die äußere Schleife bestimmt die **Anzahl der Zeilen** (`i` läuft von `1` bis `5`).  
 - Die innere Schleife fügt **pro Zeile mehr Sterne hinzu** (`j` läuft bis `i`).  
 - Ergebnis: Ein **dreieckiges Sternmuster**.
 
 🔹 **Challenge für Schüler:**  
+
 **Wie würde man das Muster umgedreht darstellen?** 🤔
 
 
 ## 🔹 4. Häufige Probleme & Optimierungstipps
+
 **❌ 1. Endlosschleife durch falsche Bedingungen**
+
 Falls eine Schleifenvariable **nicht korrekt verändert** wird, kann die Schleife unendlich lange laufen!
 
 **Fehlerhaftes Beispiel:**  
+
 ```js
 for (let i = 0; i < 3; i++) {
   for (let j = 0; j < 3; ) { // j wird nie verändert! 😱
@@ -806,8 +837,11 @@ for (let i = 0; i < 3; i++) {
   }
 }
 ```
-✅ **Lösung:**  
+
+✅ **Lösung:** 
+ 
 Stelle sicher, dass `j` **innerhalb der Schleife** verändert wird!
+
 ```js
 for (let i = 0; i < 3; i++) {
   for (let j = 0; j < 3; j++ ) { // j wird nie verändert! 😱
@@ -815,12 +849,15 @@ for (let i = 0; i < 3; i++) {
   }
 }
 ```
+
 ---
 
 ### ✅ 2. Performance-Tipp: Innere Schleife abhängig von der äußeren Schleife begrenzen
+
 Falls eine Schleife unnötig oft läuft, kann das **Leistungsprobleme** verursachen.
 
-**Besseres Beispiel:**  
+**Besseres Beispiel:** 
+ 
 ```js
 for (let i = 0; i < 5; i++) {
   for (let j = 0; j < i; j++) {  // Reduziert die Anzahl der Durchläufe
@@ -828,26 +865,32 @@ for (let i = 0; i < 5; i++) {
   }
 }
 ```
+
 Hier läuft die innere Schleife **weniger oft** als in einer klassischen `i x j`-Schleife.
 
 ---
 
 ### 🔹 5. Praxisaufgabe für Schüler (Hands-on)
+
 **📝 Aufgabe: Erstelle eine "Schachbrett"-Tabelle mit # und leerem Feld**
 
 **Anforderung:**  
+
 - Nutze eine verschachtelte Schleife, um eine **8×8 Schachbrett-Darstellung** auszugeben.  
 - Nutze `#` für dunkle Felder und `" "` für helle Felder.  
 - Tipp: Die Farbe wechselt abwechselnd pro Spalte & Zeile.  
 
 🔹 **Beispielausgabe für ein 8×8-Feld:**
+
 ```
 # # # # # # # # 
 # # # # # # # # 
 # # # # # # # # 
 # # # # # # # #
 ```
+
 ✅ **Lösungsvorschlag:**
+
 ```js
 for (let i = 0; i < 8; i++) {
   let row = "";
@@ -864,6 +907,7 @@ for (let i = 0; i < 8; i++) {
 
 
 ### 🚀 Fazit der 4. Stunde
+
 ✅ **Heute gelernt:**  
 - Was verschachtelte Schleifen sind & wie sie funktionieren.  
 - Wie sie für praktische Anwendungen (Multiplikationstabelle, Muster) genutzt werden.  
@@ -871,8 +915,6 @@ for (let i = 0; i < 8; i++) {
 - Wie man sie effizient optimieren kann.  
 
 Hier ist die **fünfte Unterrichtsstunde** über **effiziente Schleifen und Performance-Optimierung** im Detail ausgearbeitet.  
-
-
 
 # 🕓 Stunde 5: Effiziente Nutzung von Schleifen & Vermeidung von Endlosschleifen
 
@@ -886,12 +928,15 @@ Hier ist die **fünfte Unterrichtsstunde** über **effiziente Schleifen und Perf
 
 
 ### 🔹 1. Warum ist die Optimierung von Schleifen wichtig?
+
 Schleifen sind ein leistungsfähiges Werkzeug in JavaScript, aber **ineffiziente Schleifen** können:
+
 - den Code **langsamer** machen,  
 - den Browser einfrieren lassen (bei zu vielen Durchläufen),  
 - unnötige Berechnungen ausführen.  
 
 **❌ Beispiel für eine ineffiziente Schleife**
+
 ```js
 for (let i = 0; i < arr.length; i++) { 
 	console.log(arr[i]);  
@@ -899,9 +944,11 @@ for (let i = 0; i < arr.length; i++) {
 ```
 
 **Problem:**  
+
 Bei **jedem Durchlauf** wird `arr.length` **neu berechnet**, was bei großen Arrays teuer ist.
 
 ✅ **Optimierte Version:**
+
 ```js
 const length = arr.length;  // Länge nur einmal berechnen
 for (let i = 0; i < length; i++) { 
@@ -910,13 +957,16 @@ for (let i = 0; i < length; i++) {
 ```
 
 📌 **Warum ist das besser?**  
+
 - `arr.length` wird nur **einmal** gespeichert → **schnellere Ausführung!**  
 
 
 ### 🔹 2. Endlosschleifen erkennen & vermeiden
+
 Eine **Endlosschleife** läuft unendlich lange und kann den Browser zum Absturz bringen.  
 
 **❌ Beispiel für eine Endlosschleife mit `while`**
+
 ```js
 let i = 0;
 while (i < 5) {
@@ -926,6 +976,7 @@ while (i < 5) {
 ```
 
 ✅ **Lösung:**  
+
 ```js
 let i = 0;
 while (i < 5) {
@@ -934,7 +985,8 @@ while (i < 5) {
 }
 ```
 
-📌 **Regel:**  
+📌 **Regel:** 
+ 
 Immer sicherstellen, dass die **Schleifenbedingung irgendwann `false` wird**!
 
 ---
@@ -948,6 +1000,7 @@ Immer sicherstellen, dass die **Schleifenbedingung irgendwann `false` wird**!
 | `do...while` | Wenn der Code **mindestens einmal** ausgeführt werden soll | Erst ausführen, dann Bedingung prüfen |
 
 **📌 Beispiel für eine `do...while`-Schleife**
+
 ```js
 let i = 10;
 do {
@@ -955,6 +1008,7 @@ do {
 	i++;
 } while (i < 5);
 ```
+
 **Ausgabe:** `10`  
 
 📌 **Warum?** → Der Code wird **mindestens einmal** ausgeführt, obwohl die Bedingung `false` ist.
@@ -964,6 +1018,7 @@ do {
 #### ✅ 1. Verwenden von `break` und `continue` zur Effizienzsteigerung
 
 **❌ Beispiel ohne `break` (ineffizient)**
+
 ```js
 for (let i = 0; i < 1000; i++) {
 	if (i === 10) {
@@ -971,9 +1026,11 @@ for (let i = 0; i < 1000; i++) {
 	}
 }
 ```
+
 Hier wird **die Schleife bis 1000 durchlaufen**, obwohl das gesuchte Element **bei 10 gefunden wurde**.
 
 ✅ **Optimierung mit `break`:**
+
 ```js
 for (let i = 0; i < 1000; i++) {
 	if (i === 10) {
@@ -982,11 +1039,13 @@ for (let i = 0; i < 1000; i++) {
 	}
 }
 ```
+
 📌 **Vorteil:** Die Schleife **hört sofort auf**, sobald das Element gefunden wurde.  
 
 #### ✅ 2. Effizientes Traversieren von Arrays
 
 **❌ Klassische `for`-Schleife (bei großen Arrays langsam)**
+
 ```js
 const numbers = [10, 20, 30, 40, 50];
 
@@ -994,7 +1053,9 @@ for (let i = 0; i < numbers.length; i++) {
 	console.log(numbers[i]);
 }
 ```
+
 ✅ **Bessere Alternativen:**
+
 ```js
 // 🔹 Mit for...of (lesbarer)
 for (const num of numbers) {
@@ -1004,7 +1065,9 @@ for (const num of numbers) {
 // 🔹 Mit forEach (funktionaler Ansatz)
 numbers.forEach(num => console.log(num));
 ```
+
 📌 **Vorteil:**  
+
 - `for...of` ist **kürzer und lesbarer**.  
 - `forEach` ist **sehr klar und funktional**, aber nicht für `break` geeignet.  
 
@@ -1012,6 +1075,7 @@ numbers.forEach(num => console.log(num));
 Wenn möglich, sollte man **doppelte Schleifen vermeiden**, da sie **exponentiell langsamer** sind.
 
 **❌ Ineffiziente doppelte Schleife**
+
 ```js
 for (let i = 0; i < users.length; i++) {
 	for (let j = 0; j < posts.length; j++) {
@@ -1023,6 +1087,7 @@ for (let i = 0; i < users.length; i++) {
 ```
 
 ✅ **Bessere Lösung mit `Map` für schnelles Lookup:**
+
 ```js
 const postMap = new Map();
 posts.forEach(post => postMap.set(post.userId, post));
@@ -1035,6 +1100,7 @@ users.forEach(user => {
 ```
 
 📌 **Warum ist das besser?**  
+
 - **Statt `O(n²)`, nur `O(n)` Laufzeit** → 🚀 **wesentlich schneller!**  
 
 ### 🔹 5. Praxisaufgabe für Schüler (Hands-on)
@@ -1046,6 +1112,7 @@ users.forEach(user => {
 3. Nutze eine **effiziente Schleife mit `break`**.
 
 **Beispielcode zum Starten:**
+
 ```js
 const numbers = Array.from({ length: 100 }, () => Math.floor(Math.random() * 1000) + 1);
 
@@ -1062,24 +1129,30 @@ for (let num of numbers) {
 console.log(divisibleBySeven);
 ```
 
-📌 **Erwartete Ausgabe:**  
+📌 **Erwartete Ausgabe:** 
+ 
 `[14, 49, 77, 700, 203]` (Beispielwerte)
 
 
 ### 🚀 Fazit der 5. Stunde
+
 ✅ **Heute gelernt:**  
+
 ✔ Warum effiziente Schleifen wichtig sind.  
 ✔ Wie man Endlosschleifen vermeidet.  
 ✔ Wann `for`, `while` oder `do...while` am besten genutzt wird.  
 ✔ Optimierungstipps: `break`, `Map`, `forEach` & Co.  
 ✔ Praktische Anwendung mit einer effizienten Filterung.  
 
-### 🎯 **Nächster Schritt:**  
-👉 **Bonusaufgabe:**  
+### 🎯 **Nächster Schritt:** 
+ 
+👉 **Bonusaufgabe:** 
+ 
 Hier ist die **Lösung für die Bonusaufgabe**, um den größten gemeinsamen Teiler (**ggT**) zweier Zahlen mithilfe einer Schleife zu berechnen:  
 
 
 **Lösung mit einer `while`-Schleife (Euklidischer Algorithmus)**
+
 ```js
 function ggT(a, b) {
 	while (b !== 0) {
@@ -1095,13 +1168,15 @@ console.log(ggT(48, 18)); // ➝ 6
 console.log(ggT(101, 103)); // ➝ 1 (weil prim)
 console.log(ggT(56, 98)); // ➝ 14
 ```
+
 📌 **Erklärung:**  
+
 1. Solange `b` nicht `0` ist, wird der Rest `a % b` berechnet.  
 2. `a` nimmt den alten Wert von `b` an, `b` den Rest.  
 3. Sobald `b === 0`, ist `a` der größte gemeinsame Teiler.  
 
-
 **Alternative Lösung mit einer `for`-Schleife**
+
 ```js
 function ggTFor(a, b) {
 	let min = Math.min(a, b);
@@ -1120,6 +1195,9 @@ console.log(ggTFor(48, 18)); // ➝ 6
 console.log(ggTFor(101, 103)); // ➝ 1
 console.log(ggTFor(56, 98)); // ➝ 14
 ```
+
 📌 **Warum ist die `while`-Version besser?**  
+
 ✅ **Schneller:** Euklidischer Algorithmus ist `O(log n)`, die `for`-Variante ist `O(n)`.  
+
 ✅ **Weniger Iterationen:** Während die `for`-Schleife alle Zahlen bis `min(a, b)` durchgeht, reduziert die `while`-Schleife die Zahlen schnell.  
