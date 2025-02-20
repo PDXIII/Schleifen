@@ -710,6 +710,7 @@ for(let i = 1; i <= 20; i++) {
 2. `continue` sorgt dafür, dass Zahlen wie 3, 6, 9, 12 nicht ausgegeben werden.
 3. console.log(i) wird nur für die gewünschten Zahlen ausgeführt.
 
+**Ende Schleifen Tag 2 20.02.2025**
 ---
 
 ## 🕓 Stunde 4: Verschachtelte Schleifen

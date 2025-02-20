@@ -167,12 +167,43 @@
         //     console.log(i);
         // }
 
-        let i = 0;
+        // let i = 0;
 
-        while (i < 100 ) {
-            i++;
-            if (i % 2 !== 0) {
+        // while (i < 100 ) {
+        //     i++;
+        //     if (i % 2 !== 0) {
+        //         continue;
+        //     }
+        //     console.log(i);
+        // }
+
+        // const namen = ["Anna", "Robert", "Chris", "Julia", "Tom"];
+
+        // Bitte gib nur die Namen mit mehr als 5 Buchstaben aus.
+        // Bitte brich ab wenn der Name Chris auftaucht
+
+        // for (let i = 0; i < namen.length; i++) {
+        //     if (namen[i] === "Chris") {
+        //         console.log("Schleife abgebrochen!")
+        //         break;
+        //     }
+        //     if (namen[i].length <= 5) {
+        //         continue;
+        //     }
+        //     console.log(namen[i]);
+        // }
+
+        // 1. Schreibe eine for-Schleife, die alle Zahlen von 1 - 20 ausgibt.
+        // 2. überspringe alle Zahlen, die durch 3 teilbar sind. zahl % 3 === 0
+        // 3. Brich das Programm ab, wenn 15 erreicht ist. Benutze dafür break.
+
+        for (let i = 1; i <= 20; i++) {
+            if(i % 3 === 0) {
                 continue;
+            }
+            if(i >= 15) {
+                console.log("Abbruch");
+                break;
             }
             console.log(i);
         }
