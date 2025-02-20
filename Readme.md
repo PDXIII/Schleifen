@@ -19,7 +19,7 @@
 
 Struktur und Syntax der `for`Schleife.
         
-```jsx
+```js
 for (let i = 0; i < 5; i++) {
 	console.log(i);
 }
@@ -29,10 +29,11 @@ for (let i = 0; i < 5; i++) {
 
 Struktur und Syntax der `while`Schleife.
         
-```jsx
+```js
 let i = 0;
 while (i < 5) {
-	console.log(i);  i++;
+	console.log(i); 
+	i++;
 }
 ```
         
@@ -40,11 +41,11 @@ while (i < 5) {
 
 Struktur und Syntax der `do...while`Schleife
         
-```jsx
+```js
 let i = 0;
 
 do {
-console.log(i);  i++;
+	console.log(i);  i++;
 } while (i < 5);
 ```
         
@@ -52,7 +53,7 @@ console.log(i);  i++;
 
 Verwendung von `break` und `continue`
         
-```jsx
+```js
 for (let i = 0; i < 5; i++) {
 	if (i === 3) {
 		break;
@@ -71,7 +72,7 @@ for (let i = 0; i < 5; i++) {
 ### Verschachtelte Schleifen
 Erklärung und Beispiele für verschachtelte Schleifen
     
-```jsx
+```js
 for (let i = 0; i < 3; i++) {
   for (let j = 0; j < 3; j++) {
 	  console.log(`i = ${i}, j = ${j}`);
@@ -99,12 +100,17 @@ for (let i = 0; i < 3; i++) {
 Nehmen wir an, wir wollen die Zahlen 1 bis 5 ausgeben.
 Ohne Schleife:
 
-```
+``` js
 console.log(1);
 console.log(2);
 console.log(3);
 console.log(4);
 console.log(5);
+
+// viel besser!
+for(let i = 1; i <= 5; i++) {
+	console.log(i);
+}
 ```
 
 👉 Fragen an die Klasse:
@@ -136,7 +142,7 @@ Eine Schleife ist eine wiederholende Code-Struktur, die eine Bedingung überprü
 
 **📌 Grundstruktur:**
 
-```
+```js
 for (Startwert; Bedingung; Änderung) {
   // Code, der wiederholt wird
 }
@@ -144,7 +150,7 @@ for (Startwert; Bedingung; Änderung) {
 
 **💡 Beispiel: Zahlen von 1 bis 5 ausgeben:**
 
-```
+```js
 for (let i = 1; i <= 5; i++) {
   console.log(i);
 }
@@ -190,7 +196,7 @@ Erstelle eine for-Schleife, die die Quadratzahlen von 1 bis 10 ausgibt.
 
 **📌 Lösung:**
 
-```
+```js
 for (let i = 1; i <= 10; i++) {
   console.log(i * i);
 }
@@ -217,7 +223,7 @@ Gib die Zahlen von 10 bis 1 in absteigender Reihenfolge aus.
 
 **📌 Lösung:**
 
-```
+```js
 for (let i = 10; i >= 1; i--) {
   console.log(i);
 }
@@ -275,7 +281,7 @@ while (Bedingung) {
 
 **👉 Beispiel: Zahlen von 1 bis 5 ausgeben**
 
-```
+```js
 let i = 1;
 
 while (i <= 5) {
@@ -319,7 +325,7 @@ Schreibe eine while-Schleife, die die ungeraden Zahlen von 1 bis 10 ausgibt.
 
 **📌 Lösung:**
 
-```
+```js
 let i = 1;
 
 while (i <= 10) {
@@ -349,7 +355,7 @@ Schreibe eine `while`-Schleife, die einen Countdown von 10 auf 1 ausgibt.
 
 **📌 Lösung:**
 
-```
+```js
 let i = 10;
 
 while (i >= 1) {
@@ -367,7 +373,7 @@ while (i >= 1) {
 
 **📌 Grundstruktur:**
 
-```
+```js
 do {
   // Code, der mindestens einmal ausgeführt wird
 } while (Bedingung);
@@ -375,7 +381,7 @@ do {
 
 **👉 Beispiel: Zahlen von 1 bis 5 ausgeben**
 
-```
+```js
 let i = 1;
 
 do {
@@ -396,7 +402,7 @@ do {
 
 **👉 Was passiert, wenn i = 10 ist?**
 
-```
+```js
 let i = 10;
 
 do {
@@ -420,7 +426,7 @@ Schreibe eine `do...while`-Schleife, die eine Zahl vom Benutzer abfragt, bis er 
 
 **📌 Lösung:**
 
-```
+``` js
 let zahl;
 
 do {
